@@ -20,7 +20,7 @@ class User(db.Model):
     __tablename__ = 'user'
 
     # 设定结构体对应表格的字段
-    username = db.Column(db.VARCHAR, primary_key=True)
+    username = db.Column(db.String(100), primary_key=True)
     subscribe_time = db.Column(db.TIMESTAMP, default=datetime.now())
     total_pay = db.Column('createdAt', db.Integer, nullable=False, default=0)
     vip_expire_time = db.Column('updatedAt', db.TIMESTAMP, nullable=False, default=datetime.now())
